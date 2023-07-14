@@ -36,7 +36,7 @@ const Success: React.FC = (props) => {
             </div>
             <div className="mt-20">
                 <a
-                    className="rounded bg-white px-8 py-4 capitalize text-brand-blue drop-shadow-hard drop-shadow-lg hover:text-blue-700"
+                    className="rounded bg-white px-8 py-4 capitalize text-brand-blue hover:text-blue-700"
                     href={url}
                     rel={'noreferrer'}
                     target={'_blank'}
