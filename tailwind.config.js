@@ -12,7 +12,7 @@ module.exports = {
                 'brand-green': '#00A160',
             },
             fontFamily: {
-                inter: ['Inter', 'cursive'],
+                inter: ['Inter', 'sans-serif'],
             },
         },
     },

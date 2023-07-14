@@ -17,7 +17,7 @@ interface ErrorProps {
 
 const ErrorNotice: React.FC<ErrorProps> = (props) => {
     return (
-        <div className="font-dela text-sm text-red-500">{props.message}</div>
+        <div className="font-inter text-sm text-red-500">{props.message}</div>
     );
 };
 
@@ -113,7 +113,7 @@ const RegistrationForm: React.FC = (props) => {
                         <input
                             style={{}}
                             className={classNames(
-                                'font-dela peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm lowercase text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500'
+                                'peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 font-inter text-sm lowercase text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500'
                             )}
                             type="text"
                             // placeholder=""
@@ -129,7 +129,7 @@ const RegistrationForm: React.FC = (props) => {
                                     /^(([a-z0-9]+[\-_])*[a-z0-9]+\.)*([a-z0-9]+[\-_])*[a-z0-9]+$/i,
                             })}
                         />
-                        <div className="font-dela pointer-events-none absolute left-0 top-0 select-none py-2.5 text-sm text-gray-500">
+                        <div className="pointer-events-none absolute left-0 top-0 select-none py-2.5 font-inter text-sm text-gray-500">
                             <span className="pointer-events-none select-none opacity-0">
                                 {watchAccountInput}
                             </span>
@@ -164,7 +164,7 @@ const RegistrationForm: React.FC = (props) => {
                 </div>
                 <div className="group relative z-0 mb-6 w-full">
                     <input
-                        className="font-dela peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                        className="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 font-inter text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
                         type="number"
                         // placeholder="pin"
                         pattern="\d*"

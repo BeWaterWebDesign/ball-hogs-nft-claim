@@ -18,7 +18,7 @@ const Success: React.FC = (props) => {
     }, []);
 
     return (
-        <div className="font-dela absolute bottom-0 left-0 right-0 top-0 bg-brand-green pt-16 text-center text-brand-cream">
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-brand-green pt-16 text-center font-inter text-brand-cream">
             <div className="mb-8 text-3xl font-bold uppercase">Success</div>
             <div className="text-lg uppercase">Your PIN is: </div>
             <div className="text-3xl">{pin}</div>
