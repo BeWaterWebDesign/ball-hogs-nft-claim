@@ -18,12 +18,12 @@ const Success: React.FC = (props) => {
     }, []);
 
     return (
-        <div className="absolute top-0 bottom-0 left-0 right-0 bg-brand-blue pt-16 text-center font-dela text-brand-cream">
-            <div className="mb-8 text-5xl uppercase">Success!</div>
+        <div className="font-dela absolute bottom-0 left-0 right-0 top-0 bg-brand-green pt-16 text-center text-brand-cream">
+            <div className="mb-8 text-3xl font-bold uppercase">Success</div>
             <div className="text-lg uppercase">Your PIN is: </div>
-            <div className="text-3xl shadow-black drop-shadow-hard">{pin}</div>
+            <div className="text-3xl">{pin}</div>
             <div className="mt-4 text-lg uppercase">Your Account name is:</div>
-            <div className="text-3xl shadow-black drop-shadow-hard">
+            <div className="text-3xl">
                 {accountName}
                 {accountSuffix}
             </div>
@@ -36,7 +36,7 @@ const Success: React.FC = (props) => {
             </div>
             <div className="mt-20">
                 <a
-                    className="rounded bg-white py-4 px-8 capitalize text-brand-blue drop-shadow-hard drop-shadow-lg hover:text-blue-700"
+                    className="rounded bg-white px-8 py-4 capitalize text-brand-blue drop-shadow-hard drop-shadow-lg hover:text-blue-700"
                     href={url}
                     rel={'noreferrer'}
                     target={'_blank'}

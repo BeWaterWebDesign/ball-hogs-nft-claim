@@ -93,7 +93,7 @@ const RegistrationForm: React.FC = (props) => {
                 width={300}
                 height={300}
                 alt=""
-                className="rounded-lg border-2 border-gray-200"
+                className="rounded-lg border border-gray-200 shadow"
             />
             <div className="text-center text-lg uppercase">
                 Mint your BIG3 Ball Hogs attendance NFT
