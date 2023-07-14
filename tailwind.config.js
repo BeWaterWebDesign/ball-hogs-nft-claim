@@ -9,9 +9,10 @@ module.exports = {
             colors: {
                 'brand-blue': '#1351B2',
                 'brand-cream': '#F5F6F0',
+                'brand-green': '#00A160',
             },
             fontFamily: {
-                dela: ['Dela Gothic One', 'cursive'],
+                inter: ['Inter', 'cursive'],
             },
         },
     },

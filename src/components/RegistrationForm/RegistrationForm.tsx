@@ -73,10 +73,10 @@ const RegistrationForm: React.FC = (props) => {
     } = useForm<FormInputs>();
     const onSubmit: SubmitHandler<FormInputs> = (data) => {
         // A valid name and PIN have been entered -- Send these up to the store
-        
+
         let accountLower = data.accountName.toLowerCase();
         accountLower = accountLower.replace(/\s+/g, '');
-        
+
         setPin(data.pin);
         setAccountName(accountLower);
         // Once the form data has been set, call the App-level "fetch" directly
@@ -87,18 +87,24 @@ const RegistrationForm: React.FC = (props) => {
     const watchAccountInput = watch('accountName', '');
 
     return (
-        <div className="flex w-full max-w-3xl flex-col items-center justify-center space-y-8">
-            <div className="text-center font-dela text-lg uppercase">
-                Thank you for attending The world premier of "Blue"
+        <div className="flex w-full max-w-3xl flex-col items-center justify-center gap-8 font-inter font-semibold">
+            <img
+                src="https://i.ibb.co/WH6pJtw/NFT-Image.png"
+                width={300}
+                height={300}
+                alt=""
+                className="rounded-lg border-2 border-gray-200"
+            />
+            <div className="text-center text-lg uppercase">
+                Mint your BIG3 Ball Hogs attendance NFT
             </div>
-            <div className="text-center font-dela text-lg uppercase">
-                Your attendance has unlocked a commemorative NFT. Available to
-                mint only today. Create an account to mint.
+            <div className="text-center text-base text-gray-500">
+                To mint your NFT, create a NEAR wallet using the form below.
             </div>
 
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex w-full flex-col space-y-6"
+                className="flex w-full max-w-md flex-col space-y-6"
                 autoComplete="off"
                 autoCapitalize="off"
             >
@@ -107,7 +113,7 @@ const RegistrationForm: React.FC = (props) => {
                         <input
                             style={{}}
                             className={classNames(
-                                'peer block w-full lowercase appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 font-dela text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500'
+                                'font-dela peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm lowercase text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500'
                             )}
                             type="text"
                             // placeholder=""
@@ -123,7 +129,7 @@ const RegistrationForm: React.FC = (props) => {
                                     /^(([a-z0-9]+[\-_])*[a-z0-9]+\.)*([a-z0-9]+[\-_])*[a-z0-9]+$/i,
                             })}
                         />
-                        <div className="pointer-events-none absolute top-0 left-0 select-none py-2.5 font-dela text-sm text-gray-500">
+                        <div className="font-dela pointer-events-none absolute left-0 top-0 select-none py-2.5 text-sm text-gray-500">
                             <span className="pointer-events-none select-none opacity-0">
                                 {watchAccountInput}
                             </span>
@@ -158,7 +164,7 @@ const RegistrationForm: React.FC = (props) => {
                 </div>
                 <div className="group relative z-0 mb-6 w-full">
                     <input
-                        className="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 font-dela text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                        className="font-dela peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
                         type="number"
                         // placeholder="pin"
                         pattern="\d*"
@@ -185,18 +191,11 @@ const RegistrationForm: React.FC = (props) => {
                         <ErrorNotice message="PIN is required" />
                     )}
                 </div>
-                <div className="text-center font-dela text-lg uppercase">
-                    This NFT will unlock future experiences from Danny Daze and
-                    Refraction
-                </div>
-                <div className="text-center font-dela text-lg uppercase">
-                    Hold on to your passcode!
-                </div>
                 <div className="flex justify-center">
                     <button
                         disabled={pending}
                         type="submit"
-                        className="mr-2 inline-flex items-center rounded-lg border-2 border-brand-blue bg-brand-blue py-2.5 px-5 font-dela text-sm font-medium text-neutral-100  focus:z-10 focus:bg-neutral-100 focus:text-blue-700 focus:ring-2 focus:ring-blue-700"
+                        className="mr-2 inline-flex items-center rounded bg-white px-5 py-2.5 font-inter text-sm font-semibold ring-2 ring-brand-green transition-all duration-300 ease-out hover:bg-brand-green hover:text-white focus:z-10 focus:ring-2"
                     >
                         {pending && (
                             <svg
